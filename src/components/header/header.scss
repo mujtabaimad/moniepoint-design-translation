@@ -1,0 +1,13 @@
+@import "/src/assets/styles/colors.scss";
+
+.header {
+    height: 80px;
+
+    padding: 0 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $base-color;
+}

@@ -1,0 +1,28 @@
+@import "/src/assets/styles/colors.scss";
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+
+    color: $text-secondary;
+
+    svg {
+        color: #faf9fb;
+    }
+
+    .user-menu-split {
+        width: 1px;
+        height: 20px;
+
+        background-color: $text-secondary;
+    }
+
+    .user-img {
+        height: 35px;
+        width: auto;
+
+        border-radius: 50%;
+    }
+}

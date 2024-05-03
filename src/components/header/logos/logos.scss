@@ -1,0 +1,29 @@
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: white;
+
+    img {
+        height: 25px;
+    }
+
+    .framer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .options-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+
+        svg {
+            height: 7px;
+        }
+    }
+}
