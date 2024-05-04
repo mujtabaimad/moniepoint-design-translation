@@ -1,0 +1,17 @@
+.money-out-animation {
+
+    width: 45px;
+    aspect-ratio: 1;
+    background-color: #d9dce7;
+    border-radius: 50%;
+
+}
+
+
+.money-tab {
+    &:hover, &.active {
+        .money-out-animation {
+            background-color: #040512;
+        }
+    }
+}

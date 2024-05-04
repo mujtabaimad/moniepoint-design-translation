@@ -1,0 +1,39 @@
+@import "/src/assets/styles/colors.scss";
+
+.recent-transactions {
+    flex-grow: 1;
+
+    .recent-transactions-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 25px 0;
+        border-bottom: 1px solid #eeedef;
+
+        .recent-transactions-header {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+
+            .recent-transaction-icon {
+                width: 17.5px;
+            }
+
+            .recent-transactions-label {
+                font-size: 18px;
+            }
+
+            .recent-transactions-subtext {
+                font-size: 14px;
+                color: $text-secondary;
+            }
+        }
+
+        .recent-transactions-see-all-btn {
+            color: #6936f5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+}

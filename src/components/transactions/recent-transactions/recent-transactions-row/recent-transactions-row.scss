@@ -1,0 +1,68 @@
+@import "/src/assets/styles/colors.scss";
+
+.recent-transaction-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 20px;
+    border-bottom: 1px solid #eeedef;
+
+    .recent-transaction-cell {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: stretch;
+
+        &:first-of-type {
+            width: 200%;
+        }
+
+        transition: all 0.1s ease-in;
+
+        .recent-transaction-company-logo {
+            width: 40px;
+        }
+
+        .recent-transaction-company {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .company-label {
+                font-weight: bold;
+            }
+            .company-timestamp {
+                color: $text-secondary;
+            }
+        }
+
+        .transaction-type-tag {
+            background-color: #f7f9fc;
+            padding: 10px;
+        }
+
+        &.last-cell {
+            align-items: center;
+            justify-content: end;
+
+            .positive {
+                color: #2a7b6e;
+                .decimal {
+                    color: #9edbd1;
+                }
+            }
+            
+            .decimal {
+                color: $text-secondary;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: whitesmoke;
+        .recent-transaction-cell:first-of-type {
+            transform: translateX(10px);
+        }
+    }
+}
