@@ -1,0 +1,120 @@
+@import "/src/assets/styles/colors.scss";
+
+.overview {
+    position: relative;
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 60px 20px 150px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    color: white;
+
+    .balance-wrapper {
+        width: 100%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .balance-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .balance-title {
+            }
+
+            .balance {
+                display: flex;
+                align-items: flex-end;
+                gap: 30px;
+
+                .balance-value {
+                    font-size: 48px;
+                }
+
+                .balance-change {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                }
+            }
+        }
+
+        .balance-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+
+            .balance-action-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px 20px;
+                color: white;
+
+                &.analytics-btn {
+                    color: $text-secondary;
+                }
+
+                &.send-money-btn {
+                    background-color: $btn-primary;
+                }
+
+                &.add-money-btn {
+                    background-color: $btn-secondary;
+                }
+            }
+
+            .balance-actions-separator {
+                width: 1px;
+                height: 35px;
+
+                background-color: $text-secondary;
+            }
+        }
+    }
+
+    .overview-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .overview-img {
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        .overview-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .overview-title {
+                align-self: center;
+
+                .overview-days {
+                    font-size: small;
+                    color: $text-secondary;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .overview-cards {
+        position: absolute;
+        bottom: -110px;
+        width: 100%;
+        display: flex;
+        gap: 35px;
+    }
+}

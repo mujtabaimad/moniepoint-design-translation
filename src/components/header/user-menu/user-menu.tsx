@@ -1,4 +1,4 @@
-import { faGear, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faGear, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { faBell } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { FC } from "react"

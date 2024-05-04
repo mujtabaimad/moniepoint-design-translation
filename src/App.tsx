@@ -1,12 +1,18 @@
 import React from "react";
 import Header from "./components/header/header";
 
-import "./App.css";
+import "./App.scss";
+import Overview from "./components/overview/overview";
+import Transactions from "./components/transactions/transactions";
 
 function App() {
   return (
     <>
-      <Header />
+      <div className="page-top-wrapper">
+        <Header />
+        <Overview />
+      </div>
+      <Transactions />
     </>
   );
 }

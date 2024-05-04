@@ -1,0 +1,110 @@
+.bsa-wrapper {
+    position: relative;
+    $bsa-wrapper-background: #d8dbe6;
+
+    height: 50px;
+    aspect-ratio: 35/40;
+
+    .bsa-top-triangle {
+        width: 0;
+        border-bottom: 12.5px solid $bsa-wrapper-background;
+        border-left: 21.875px solid transparent;
+        border-right: 21.875px solid transparent;
+    }
+
+    .bsa-mid-box {
+        width: 43.75px;
+        height: 25px;
+        background-color: $bsa-wrapper-background;
+    }
+
+    .bsa-bottom-triangle {
+        width: 0;
+        border-top: 12.5px solid $bsa-wrapper-background;
+        border-left: 21.875px solid transparent;
+        border-right: 21.875px solid transparent;
+    }
+
+    .bsa-plate {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        left: calc(50% - 12.5px);
+        transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+        background-color: white;
+        box-shadow: 5px 5px 10px 0px rgb(180, 180, 180);
+    }
+
+    .bsa-plate-3 {
+        top: 13px;
+    }
+    .bsa-plate-2 {
+        top: 6px;
+    }
+    .bsa-plate-1 {
+        width: 12px;
+        height: 12px;
+        top: 18px;
+        left: calc(50% - 6px);
+        background: #060a23;
+        transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(7px);
+    }
+}
+
+.overview-card {
+
+    &:hover {
+        .bsa-wrapper {
+            $bsa-wrapper-background: #f9dce9;
+
+            .bsa-top-triangle {
+                border-bottom-color: $bsa-wrapper-background;
+            }
+        
+            .bsa-mid-box {
+                background-color: $bsa-wrapper-background;
+            }
+        
+            .bsa-bottom-triangle {
+                border-top-color: $bsa-wrapper-background;
+            }
+        
+            .bsa-plate {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 20px;
+                left: calc(50% - 12.5px);
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+                background-color: white;
+                box-shadow: 5px 5px 10px 0px rgb(180, 180, 180);
+            }
+        
+            .bsa-plate-4 {
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) scale(0.9);
+            }
+
+            .bsa-plate-3 {
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) scale(0.85) translateZ(-2px);
+                top: 13px;
+            }
+
+            .bsa-plate-2 {
+                
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) scale(0.7) translateZ(-5px);
+                top: 6px;
+                background-color: #de6198;
+            }
+
+            .bsa-plate-1 {
+                width: 12px;
+                height: 12px;
+                top: 18px;
+                left: calc(50% - 6px);
+                background: white;
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(7px);
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.baa-wrapper {
+    position: relative;
+
+    background-color: #d8dbe6;
+    border-radius: 50%;
+
+    height: 100%;
+    aspect-ratio: 1;
+
+    .baa-head {
+        position: absolute;
+        width: 13px;
+        aspect-ratio: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -125%);
+
+        border-radius: 50%;
+        background-color: white;
+
+        z-index: 2;
+    }
+
+    .baa-circles {
+        position: absolute;
+        width: 35px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        overflow: hidden;
+    }
+
+    .baa-outer-circle {
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 1;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .baa-middle-circle {
+        position: absolute;
+        width: 25px;
+        aspect-ratio: 1;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+        background-color: #d8dbe6;
+    }
+
+    .baa-inner-circle {
+        position: absolute;
+        width: 15px;
+        aspect-ratio: 1;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+        background-color: #0a0e26;
+    }
+
+    .baa-hidden-circle {
+        position: absolute;
+        width: 0;
+        aspect-ratio: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+        background-color: #5e2eec;
+    }
+
+}
+
+.overview-card {
+    &.overview-card-active {
+        .baa-wrapper {
+            background: linear-gradient(#e2dffe, #cec0f7);
+        }
+        
+        .baa-middle-circle {
+            background-color: #d5c9f7;
+        }
+        
+        .baa-inner-circle {
+            background-color: #5f2eeb;
+        }
+    }
+
+    &:hover {
+        .baa-wrapper {
+            background: linear-gradient(#e2dffe, #cec0f7);
+
+            .baa-head {
+                transform: translate(-50%, -50%);
+            }
+
+            .baa-middle-circle {
+                background-color: #d5c9f7;
+            }
+
+            .baa-inner-circle {
+                transform: translate(-50%, -80%);
+            }
+
+            .baa-hidden-circle {
+                width: 25px;
+            }
+        }
+    }
+}
