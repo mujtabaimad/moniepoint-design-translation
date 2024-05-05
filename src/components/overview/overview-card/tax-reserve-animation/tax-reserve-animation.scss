@@ -99,7 +99,7 @@
         }
     }
 
-    &:hover {
+    &:hover:not(.overview-card-active) {
         .tra-wrapper {
             $tra-wrapper-background: #ffdabd;
             background-color: $tra-wrapper-background;

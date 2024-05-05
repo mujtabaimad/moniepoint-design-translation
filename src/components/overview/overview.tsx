@@ -65,6 +65,7 @@ const Overview: FC = () => {
           amount="$33,842"
           animationComponent={<BusinessAccountAnimation/>}
           viewDetailsLabel="View Account Details"
+          expandable
         />
         <OverviewCard
           title="TAX RESERVE"

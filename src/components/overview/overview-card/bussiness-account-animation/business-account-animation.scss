@@ -96,7 +96,7 @@
         }
     }
 
-    &:hover {
+    &:hover:not(.overview-card-active) {
         .baa-wrapper {
             background: linear-gradient(#e2dffe, #cec0f7);
 

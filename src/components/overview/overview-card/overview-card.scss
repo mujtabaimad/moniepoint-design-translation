@@ -1,93 +1,122 @@
 .overview-card {
-    width: calc(33% - 70px );
-    flex-shrink: 0;
-    padding: 30px;
-    padding-bottom: 0;
-
+    flex-grow: 1;
+    min-width: 300px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    gap: 30px;
 
     background-color: white;
     box-shadow: 0px 50px 51px -50px rgba(0, 0, 0, 0.1);
 
-    color: black;
+    overflow: hidden;
 
-    .animation-wrapper {
-        height: 50px;
-    }
+    .overview-card-details {
+        width: 100%;
+        flex-shrink: 0;
+        padding: 30px;
+        padding-bottom: 0;
 
-    .overview-card-title-wrapper {
         display: flex;
-        gap: 10px;
-        font-weight: 600;
-        font-size: 14px;
-    }
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
 
-    .overview-card-amount {
-        position: relative;
+        color: black;
 
-        height: 80px;
-        overflow: hidden;
-
-        .overview-card-amount-value {
-            position: absolute;
-
-            top: 0;
-            font-size: 42px;
-            color: black;
+        .animation-wrapper {
+            height: 50px;
         }
 
-        .overview-card-view-details {
-            position: absolute;
-
-            width: 100%;
+        .overview-card-title-wrapper {
             display: flex;
-            height: calc(100% - 4px);
-            top: 0;
-            transform: translateY(100%);
-
             gap: 10px;
-            border-bottom: solid 4px #e0e6ef;
+            font-weight: 600;
+            font-size: 14px;
+        }
 
-            background-color: white;
+        .overview-card-amount {
+            position: relative;
 
-            
+            height: 80px;
+            overflow: hidden;
 
-            .overview-card-view-details-btn {
-                flex-grow: 1;
-                height: 40px;
-                border: 2px solid #e2e6ec;
-                font-weight: 600;
+            .overview-card-amount-value {
+                position: absolute;
+
+                top: 0;
+                font-size: 42px;
+                color: black;
             }
 
-            .overview-card-chart-btn {
-                height: 40px;
+            .overview-card-view-details {
+                position: absolute;
 
-                aspect-ratio: 1;
-                border-radius: 50%;
-                background-color: #5e2eeb;
+                width: calc(100% - 60px);
+                display: flex;
+                height: calc(100% - 4px);
+                top: 0;
+                transform: translateY(100%);
+
+                gap: 10px;
+                border-bottom: solid 4px #e0e6ef;
+
+                background-color: white;
+
+                .overview-card-view-details-btn {
+                    flex-grow: 1;
+                    height: 40px;
+                    border: 2px solid #e2e6ec;
+                    font-weight: 600;
+                }
+
+                .overview-card-chart-btn {
+                    height: 40px;
+
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: #5e2eeb;
+                }
             }
+        }
+
+        & > *,
+        & > * > *,
+        & > * > * > * {
+            transition: all 0.2s ease-in;
         }
     }
 
-    &:hover {
-        .overview-card-amount-value {
-            transform: translateY(-50%);
-            color: transparent;
-        }
+    transition: all 0.2s ease-in;
 
-        .overview-card-view-details {
-            
-            transform: translateY(0%);
+    &:hover:not(.overview-card-active) {
+        .overview-card-details {
+            // border-bottom: solid 4px ;
+            .overview-card-amount-value {
+                transform: translateY(-50%);
+                color: transparent;
+            }
+
+            .overview-card-view-details {
+                transform: translateY(0%);
+            }
         }
     }
+}
 
-    & > *,
-    & > * > * ,
-    & > * > * > *
-    {
-        transition: all 0.2s ease-in;
+.overview-card {
+    &.overview-card-active {
+        width: 65%;
+        flex-shrink: 0;
+        border-bottom: solid 4px #b6a6e9;
+
+        .overview-card-details {
+            width: unset;
+        }
+
+        .overview-card-amount {
+            .overview-card-view-details {
+                border-bottom: solid 4px transparent;
+            }
+        }
     }
 }
