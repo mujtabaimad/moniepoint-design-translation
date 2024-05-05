@@ -2,7 +2,37 @@
     padding: 30px 20px 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+
+    &:first-child() {
+        .cfr-details > .cfr-label-wrapper > .cfr-label-icon {
+            background-color: #c2b4f9;
+        }
+
+        .cfr-progress > .cfr-progress-completed {
+            background-color: #c2b4f9;
+        }
+    }
+
+    &:nth-child(2) {
+        .cfr-details > .cfr-label-wrapper > .cfr-label-icon {
+            background-color: #9ce6fa;
+        }
+
+        .cfr-progress > .cfr-progress-completed {
+            background-color: #9ce6fa;
+        }
+    }
+
+    &:nth-child(3) {
+        .cfr-details > .cfr-label-wrapper > .cfr-label-icon {
+            background-color: #f6c0d9;
+        }
+
+        .cfr-progress > .cfr-progress-completed {
+            background-color: #f6c0d9;
+        }
+    }
 
     .cfr-details {
         display: flex;
@@ -16,9 +46,10 @@
 
             .cfr-label-icon {
                 position: relative;
-                width: 30px;
+                width: 25px;
                 aspect-ratio: 1;
                 border-radius: 50%;
+
                 background-color: #c2b4f9;
 
                 .cfr-triangle {
@@ -27,13 +58,13 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
 
-                    width: 1px;
-                    height: 0px;
+                    width: 0;
+                    height: 0;
                     border-style: solid;
-                    border-width: 8px;
+                    border-width: 7px 5px;
                     border-color: white transparent transparent transparent;
-                    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,.5));
-                    filter: drop-shadow(1px 1px 1px rgba(0,0,0,.5));
+                    -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+                    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
                 }
             }
 
@@ -41,8 +72,10 @@
                 font-weight: bold;
             }
             .cfr-percentage {
-                padding: 10px;
+                padding: 5px 10px;
                 background-color: #f7f9fc;
+                font-size: 12px;
+                font-weight: 600;
             }
         }
 
@@ -57,13 +90,13 @@
     .cfr-progress {
         position: relative;
         width: 100%;
-        height: 10px;
+        height: 8px;
 
-        background-color: #dcdfe9;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
 
         .cfr-progress-completed {
             position: absolute;
-            width: 70%;
             height: 100%;
 
             background-color: #c2b4f9;

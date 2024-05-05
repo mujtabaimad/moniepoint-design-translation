@@ -1,15 +1,140 @@
 .money-in-animation {
+    position: relative;
+
     width: 45px;
     aspect-ratio: 1;
-    background-color: #d9dce7;
+
+    $mia-background-color: #d9dce7;
+    background-color: $mia-background-color;
     border-radius: 50%;
+
+    .mia-arrow {
+        position: absolute;
+        height: 25px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        transition: transform 0.2s ease-in;
+
+        &.mia-arrow-2 {
+            transform: translate(-50%, -100%);
+
+            .mia-arrow-reversed-head {
+                border-color: transparent transparent transparent;
+            }
+
+            .mia-arrow-body {
+                background-color: transparent;
+            }
+        }
+
+        .mia-arrow-reversed-head {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: white transparent transparent;
+            border-width: 7px;
+
+            transition: all 0.2s ease-in;
+        }
+
+        .mia-arrow-body {
+            width: 3.5px;
+            height: 7px;
+            background-color: white;
+
+            transition: all 0.2s ease-in;
+        }
+    }
+
+    .mia-circles {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        overflow: hidden;
+
+        .mia-outer-circle {
+            position: absolute;
+            width: 100%;
+            aspect-ratio: 1;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .mia-inner-circle {
+            position: absolute;
+            width: 20px;
+            aspect-ratio: 1;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            border-radius: 50%;
+            background-color: $mia-background-color;
+
+            transition: transform ease-in 0.2s;
+        }
+    }
 }
 
-
 .money-tab {
-    &:hover, &.active {
+    &:hover,
+    &.active {
+        $mia-background-color: #040512;
         .money-in-animation {
-            background-color: #040512;
+            background-color: $mia-background-color;
+
+            .mia-circles {
+                .mia-inner-circle {
+                    background-color: $mia-background-color;
+                }
+            }
+        }
+
+        .mia-arrow {
+            &.mia-arrow-1 {
+                transform: translate(-50%, 0%);
+                .mia-arrow-reversed-head {
+                    border-color: transparent transparent transparent;
+                }
+
+                .mia-arrow-body {
+                    background-color: transparent;
+                }
+            }
+
+            &.mia-arrow-2 {
+                transform: translate(-50%, -50%);
+                .mia-arrow-reversed-head {
+                    border-color: white transparent transparent;
+                }
+
+                .mia-arrow-body {
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .money-in-animation {
+            .mia-circles {
+                .mia-inner-circle {
+                    transform: translate(-50%, -50%) scale(120%);
+                }
+            }
         }
     }
 }

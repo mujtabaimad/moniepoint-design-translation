@@ -48,9 +48,24 @@ const CashFlow: FC = () => {
         </button>
       </div>
       <div className="cash-flow-table">
-        <CashFlowRow/>
-        <CashFlowRow/>
-        <CashFlowRow/>
+        <CashFlowRow
+          label="Stripe"
+          amount="$3,514"
+          decimal=".72"
+          percentage={70}
+        />
+        <CashFlowRow
+          label="Crypto Academy"
+          amount="$1,017"
+          decimal=".49"
+          percentage={20}
+        />
+        <CashFlowRow
+          label="Wire Return"
+          amount="$318"
+          decimal=".44"
+          percentage={6}
+        />
       </div>
     </div>
   );

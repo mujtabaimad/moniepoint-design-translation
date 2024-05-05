@@ -35,7 +35,7 @@
             content: "";
             display: block;
             height: 5px;
-            bottom: 0;
+            bottom: -1px;
             left: 0px;
 
             background: linear-gradient(135deg, transparent 5px, $tra-wrapper-background 0),
@@ -45,7 +45,7 @@
             background-size: 6px 6px;
             
             
-            transition: all 0.1s ease-in;
+            transition: all 0.2s ease-in;
         }
 
         .tra-file-cover {

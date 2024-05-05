@@ -21,6 +21,8 @@
     .overview-card-title-wrapper {
         display: flex;
         gap: 10px;
+        font-weight: 600;
+        font-size: 14px;
     }
 
     .overview-card-amount {
@@ -42,12 +44,12 @@
 
             width: 100%;
             display: flex;
-            height: calc(100% - 2px);
+            height: calc(100% - 4px);
             top: 0;
             transform: translateY(100%);
 
             gap: 10px;
-            border-bottom: solid 2px gray;
+            border-bottom: solid 4px #e0e6ef;
 
             background-color: white;
 
@@ -55,11 +57,13 @@
 
             .overview-card-view-details-btn {
                 flex-grow: 1;
-                height: 50px;
+                height: 40px;
                 border: 2px solid #e2e6ec;
+                font-weight: 600;
             }
+
             .overview-card-chart-btn {
-                height: 50px;
+                height: 40px;
 
                 aspect-ratio: 1;
                 border-radius: 50%;

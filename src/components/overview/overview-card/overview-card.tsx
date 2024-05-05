@@ -10,6 +10,7 @@ type OverviewCardType = {
   animationComponent: ReactNode;
   changeDirection?: "up" | "down";
   amount: string;
+  viewDetailsLabel: string;
 };
 
 const OverviewCard: FC<OverviewCardType> = ({
@@ -17,6 +18,7 @@ const OverviewCard: FC<OverviewCardType> = ({
   animationComponent,
   changeDirection,
   amount,
+  viewDetailsLabel
 }) => {
   return (
     <div className="overview-card">
@@ -31,7 +33,7 @@ const OverviewCard: FC<OverviewCardType> = ({
         ) : changeDirection === "down" ? (
           <>
             <AmountChangeArrow changeDirection="down" />
-            <p>2.1%</p>
+            <p>-2.1%</p>
           </>
         ) : (
           <></>
@@ -41,7 +43,7 @@ const OverviewCard: FC<OverviewCardType> = ({
         <p className="overview-card-amount-value">{amount}</p>
         <div className="overview-card-view-details">
           <button className="overview-card-view-details-btn">
-            View Account Details
+            {viewDetailsLabel}
           </button>
           <button className="overview-card-chart-btn">
             <FontAwesomeIcon icon={faChartLine} color="white" />

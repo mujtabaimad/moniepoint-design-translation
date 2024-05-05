@@ -64,17 +64,20 @@ const Overview: FC = () => {
           changeDirection="up"
           amount="$33,842"
           animationComponent={<BusinessAccountAnimation/>}
+          viewDetailsLabel="View Account Details"
         />
         <OverviewCard
           title="TAX RESERVE"
           changeDirection="down"
           amount="$700"
           animationComponent={<TaxReserveAnimation/>}
+          viewDetailsLabel="Edit Tax Automation"
         />
         <OverviewCard
           title="BUSINESS SAVINGS"
           amount="$1,623"
           animationComponent={<BusinessSavingsAnimation/>}
+          viewDetailsLabel="View Account Details"
         />
       </div>
     </div>

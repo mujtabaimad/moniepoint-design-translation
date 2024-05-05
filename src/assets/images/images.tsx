@@ -8,6 +8,7 @@ import DropboxLogo from "./dropbox-image.png";
 import ZendeskLogo from "./zendesk-image.png";
 import SpotifyLogo from "./spotify-image.png";
 import CashFlowIcon from "./cash-flow-icon.png";
+import ProgressBackground from "./progress-background.png";
 
 export {
   MainLogo,
@@ -19,5 +20,6 @@ export {
   DropboxLogo,
   ZendeskLogo,
   SpotifyLogo,
-  CashFlowIcon
+  CashFlowIcon,
+  ProgressBackground,
 };
