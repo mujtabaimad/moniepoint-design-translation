@@ -73,6 +73,16 @@
                 }
             }
 
+            .balance-actions-drop-menu-btn {
+                background-color: $btn-secondary;
+                width: 35px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             .balance-actions-separator {
                 width: 1px;
                 height: 35px;

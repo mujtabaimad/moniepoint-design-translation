@@ -4,8 +4,8 @@ import "./overview.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUp,
+  faEllipsis,
   faEye,
-  faListDots,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { OverviewIcon } from "../../assets/images/images";
@@ -44,7 +44,7 @@ const Overview: FC = () => {
             <p>Add Money</p>
           </button>
           <button className="balance-actions-drop-menu-btn">
-            <FontAwesomeIcon icon={faListDots} />
+            <FontAwesomeIcon icon={faEllipsis} color="white"/>
           </button>
         </div>
       </div>
